@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select</title>
+</head>
+
+<body>
+    {%if res%}
+    <table border="2">
+        <tr>
+            <th>id</th>
+            <th>cname</th>
+            <th>address</th>
+            <th>phone</th>
+            <th>no of students</th>
+            <th>no of staff</th>
+            <th> website</th>
+            <th>email</th>
+            <th>university</th>
+        </tr>
+        {%for i in res%}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.cname}}</td>
+            <td>{{i.address}}</td>
+            <td>{{i.phone}}</td>
+            <td>{{i.noofstudents}}</td>
+            <td>{{i.noofstaff}}</td>
+            <td>{{i.website}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.university}}</td>
+        </tr>
+    </table>
+    {%endfor%}
+    {% else %}
+    <h1> no data found</h1>
+    {%endif%}
+
+
+</body>
+
+</html>
